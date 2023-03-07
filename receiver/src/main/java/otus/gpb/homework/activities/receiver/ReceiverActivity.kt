@@ -1,5 +1,6 @@
 package otus.gpb.homework.activities.receiver
 
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
@@ -23,7 +24,10 @@ class ReceiverActivity : AppCompatActivity() {
             yearTextView.text = year.toString()
             val description = it.getStringExtra("description")
             descriptionTextView.text = description.toString()
-            val image = getDrawable(R.drawable.niceguys)
+            var image = getDrawable(R.drawable.interstellar)
+            if (title == "Славные парни") {
+                image = getDrawable(R.drawable.niceguys)
+            }
             posterImageView.setImageDrawable(image)
         }
     }

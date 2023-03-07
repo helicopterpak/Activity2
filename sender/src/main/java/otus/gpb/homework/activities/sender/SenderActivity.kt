@@ -31,7 +31,19 @@ class SenderActivity : AppCompatActivity() {
 
         val button2: Button = findViewById(R.id.sendEmail)
         button2.setOnClickListener {
-            val uri = Uri.parse("mailto:" + "android@otus.ru" + "?subject=" + "классный курс!" + "&body=" + "спасибо всем причастным)))")
+            val uri = Uri.parse(
+                StringBuilder().apply {
+                    append("mailto:")
+                    append("android@otus.ru")
+                    append("?subject=")
+                    append("классный курс!")
+                    append("&body=")
+                    append("спасибо всем причастным)))")
+                }.let {
+                    it.toString()
+                }
+            )
+                //"mailto:" + "android@otus.ru" + "?subject=" + "классный курс!" + "&body=" + "спасибо всем причастным)))")
             val intent = Intent(Intent.ACTION_SENDTO, uri)
             try {
                 startActivity(intent)

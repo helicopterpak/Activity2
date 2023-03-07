@@ -28,7 +28,8 @@
         android:scaleType="centerCrop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        app:srcCompat="@drawable/ic_baseline_add_photo_alternate_24" />
+        app:srcCompat="@drawable/ic_baseline_add_photo_alternate_24"
+        />
 
     <TextView
         android:id="@+id/textview_name"
